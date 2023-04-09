@@ -2,13 +2,6 @@ body {
 background-color: #F9F7FE;
 }
 
-h1 {
-        color: #272142;
-        font-size: 38px;
-        font-weight: 700;
-        margin: 20px 0 10px;
-}
-
 ul {
     margin: 0;
     padding: 0;
@@ -44,10 +37,17 @@ max-width: 800px;
     display: flex;
     flex-wrap: wrap;
     align-items: center;
+    padding-top: 30px;
+}
+
+.city {
+    color: #272142;
+    font-size: 32px;
+    font-weight: 700;
 }
 
 .temp-display {
-        color: #212121;
+        color: #272142;
         font-size: 80px;
         font-weight: 700;
         line-height: 1;
@@ -62,16 +62,17 @@ max-width: 800px;
 .temp-display .temp-units {
     font-size: 18px;
     position: relative;
-    top: -38px;
+    top: -45px;
     padding-left: 8px;
-}
-
-.weather-description {
-text-transform: capitalize;
 }
 
 .weather-condition {
     color: blueviolet;
+}
+
+.weather-description {
+    color: blueviolet;
+    text-transform: capitalize;
 }
 
 .footnote {
