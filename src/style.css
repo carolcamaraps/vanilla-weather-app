@@ -56,8 +56,7 @@ max-width: 800px;
 
 .temp-display .temp-icon {
     max-width: 60px;
-    padding-right: 8px;
-    margin-bottom: 15px;
+    margin: 0 8px 8px 0;
 }
 
 .temp-display .temp-units {
@@ -65,6 +64,14 @@ max-width: 800px;
     position: relative;
     top: -38px;
     padding-left: 8px;
+}
+
+.weather-description {
+text-transform: capitalize;
+}
+
+.weather-condition {
+    color: blueviolet;
 }
 
 .footnote {
