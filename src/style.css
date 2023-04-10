@@ -55,8 +55,8 @@ max-width: 800px;
 }
 
 .temp-display .temp-icon {
-    max-width: 60px;
-    margin: 0 8px 8px 0;
+    max-width: 65px;
+    margin: 0 8px 20px 0;
 }
 
 .temp-display .temp-units {
