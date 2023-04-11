@@ -9,7 +9,6 @@ return `${day} ${hours}:${minutes}`;
 
 
 function displayTemperature(response) {
-    console.log(response.data); 
   let temperatureElement = document.querySelector("#temperature");
   let cityElement = document.querySelector("#city");
   let descpriptionElement = document.querySelector("#weather-description");
@@ -33,9 +32,22 @@ function displayTemperature(response) {
 
 }
 
-let apiKey = "74207tf2dbea64540ea5c6f390o295e3";
-let query = "Rio de Janeiro";
 
-let apiUrl = `https://api.shecodes.io/weather/v1/current?query=${query}&key=${apiKey}&units=metric`;
+function search(city) {
+let apiKey = "74207tf2dbea64540ea5c6f390o295e3";
+let apiUrl = `https://api.shecodes.io/weather/v1/current?query=${city}&key=${apiKey}&units=metric`;
 
 axios.get(apiUrl).then(displayTemperature);
+}
+
+
+function handleSubmit(event) {
+  event.preventDefault();
+  let cityInputElement = document.querySelector("#city-input");
+  search(cityInputElement.value);
+}
+
+search("Tokyo");
+
+let form = document.querySelector("#search-form");
+form.addEventListener("submit", handleSubmit);
