@@ -33,6 +33,11 @@ max-width: 800px;
         margin: 50px;
 }
 
+a {
+    color: #885DF1;
+    text-decoration: none;
+}
+
 .form-control {
         background: #f9f7fe;
         border: none;
@@ -80,17 +85,18 @@ max-width: 800px;
 
 .temp-display .temp-units {
     font-size: 18px;
+    font-weight: 400;
     position: relative;
     top: -45px;
     padding-left: 8px;
 }
 
 .weather-condition {
-    color: blueviolet;
+    color: #885DF1;
 }
 
 .weather-description {
-    color: blueviolet;
+    color: #885DF1;
     text-transform: capitalize;
 }
 
