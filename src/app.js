@@ -7,6 +7,28 @@ let day = days[date.getDay()];
 return `${day} ${hours}:${minutes}`;
 }
 
+function displayForecast() {
+  let forecastElement = document.querySelector("#forecast");
+  
+  let forecastDays = ["Tue", "Wed", "Thu", "Fri", "Sat"];
+  let forecastHTML = `<div class="row">`;
+  
+  forecastDays.forEach(function(day) {
+    forecastHTML = forecastHTML + `
+        <div class="col-2">
+           <div class="forecast-date">${day}</div>
+            <img src="http://shecodes-assets.s3.amazonaws.com/api/weather/icons/broken-clouds-night.png" alt="" width="45px">
+            <div class="forecast-temp">
+            <span class="forecast-temp-max">18°</span> <span class="forecast-temp-min">12°</span>
+            </div>
+        </div>
+  `;
+  }) 
+
+  forecastHTML = forecastHTML + `</div>`;
+  forecastElement.innerHTML = forecastHTML;
+}
+
 
 function displayTemperature(response) {
   let temperatureElement = document.querySelector("#temperature");
@@ -75,3 +97,5 @@ celsiusLink.addEventListener("click", displayCelsius);
 
 
 search("Curitiba");
+
+displayForecast();
