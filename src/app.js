@@ -7,7 +7,8 @@ let day = days[date.getDay()];
 return `${day} ${hours}:${minutes}`;
 }
 
-function displayForecast() {
+function displayForecast(response) {
+  console.log(response.data.daily);
   let forecastElement = document.querySelector("#forecast");
   
   let forecastDays = ["Tue", "Wed", "Thu", "Fri", "Sat"];
@@ -28,6 +29,16 @@ function displayForecast() {
   forecastHTML = forecastHTML + `</div>`;
   forecastElement.innerHTML = forecastHTML;
 }
+
+function getForecast(response) {
+  let forecastCity = response.data.city;
+  let apiKey = "74207tf2dbea64540ea5c6f390o295e3";
+  let apiUrl = `https://api.shecodes.io/weather/v1/forecast?query=${forecastCity}&key=${apiKey}&units=metric;`
+
+  axios.get(apiUrl).then(displayForecast);
+}
+
+getForecast({ data: { city: "Curitiba" } });
 
 
 function displayTemperature(response) {
@@ -52,8 +63,6 @@ function displayTemperature(response) {
     `http://shecodes-assets.s3.amazonaws.com/api/weather/icons/${response.data.condition.icon}.png`
   );
   iconElement.setAttribute("alt", response.data.condition.description);
-  
-
 }
 
 
@@ -97,5 +106,3 @@ celsiusLink.addEventListener("click", displayCelsius);
 
 
 search("Curitiba");
-
-displayForecast();
