@@ -55,7 +55,6 @@ function getForecast(coordinates) {
   let apiUrl = `https://api.shecodes.io/weather/v1//forecast?lon=${coordinates.longitude}&lat=${coordinates.latitude}&key=${apiKey}&units=metric`;
 
   axios.get(apiUrl).then(displayForecast);
-  
 }
 
 function displayTemperature(response) {
@@ -84,7 +83,6 @@ function displayTemperature(response) {
   getForecast(response.data.coordinates);
 }
 
-
 function search(city) {
 let apiKey = "74207tf2dbea64540ea5c6f390o295e3";
 let apiUrl = `https://api.shecodes.io/weather/v1/current?query=${city}&key=${apiKey}&units=metric`;
@@ -92,36 +90,13 @@ let apiUrl = `https://api.shecodes.io/weather/v1/current?query=${city}&key=${api
 axios.get(apiUrl).then(displayTemperature);
 }
 
-
 function handleSubmit(event) {
   event.preventDefault();
   let cityInputElement = document.querySelector("#city-input");
   search(cityInputElement.value);
 }
 
-function displayFahrenheit(event) {
-  event.preventDefault();
-  let temperatureElement = document.querySelector("#temperature");
-  let fahrenheitTemperature = Math.round((celsiusTemperature * 9) / 5 + 32);
-  temperatureElement.innerHTML = fahrenheitTemperature;
-}
-
-function displayCelsius(event) {
-  event.preventDefault();
-  let temperatureElement = document.querySelector("#temperature");
-  temperatureElement.innerHTML = Math.round(celsiusTemperature);
-}
-
-let celsiusTemperature = null;
-
 let form = document.querySelector("#search-form");
 form.addEventListener("submit", handleSubmit);
 
-let fahrenheitLink = document.querySelector("#fahrenheit");
-fahrenheitLink.addEventListener("click", displayFahrenheit);
-
-let celsiusLink = document.querySelector("#celsius");
-celsiusLink.addEventListener("click", displayCelsius);
-
-
-search("Curitiba");
+search("Rio de Janeiro");
