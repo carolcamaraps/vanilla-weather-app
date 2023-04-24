@@ -2,6 +2,10 @@ body {
 background: linear-gradient(109.6deg, rgb(151, 213, 255) 11.2%, rgb(255, 155, 185) 91.1%);
 }
 
+input[type="checkbox"] {
+    display: none;
+}
+
 ul {
     margin: 0;
     padding: 0;
@@ -14,9 +18,69 @@ li {
     font-size: 16px;
 }
 
+a {
+    text-decoration: none;
+}
+
+/* Dark theme - start */
+
+.dark {
+background: linear-gradient(89.7deg, rgb(0, 32, 95) 2.8%, rgb(132, 53, 142) 97.8%);
+}
+
+.dark .weather-app {
+    background: #000000;
+    color: #fff;
+}
+
+.dark .form-control {
+    background: #d0cbcb50;
+    color: #fff;
+}
+
+.dark .search-button {
+    background: rgb(156, 59, 169);
+}
+
+.dark .search-button:hover {
+    background: rgb(156, 59, 169);
+    opacity: 0.6;
+}
+
+.dark .city {
+    color: #fff;
+}
+
+.dark .temp-display {
+    color: #fff;
+}
+
+.dark .weather-condition {
+    color: rgb(156, 59, 169);
+}
+
+.dark .weather-description {
+    color: rgb(156, 59, 169);
+}
+
+.dark .forecast-temp-max {
+    color: rgb(156, 59, 169);
+}
+
+.dark .footnote {
+    color: #ebe9e9;
+}
+
+.dark .footnote-link {
+    color: rgb(179, 67, 194);
+}
+
+
+/* Dark theme - end */
+
 .app {
-margin: 60px auto;
-max-width: 800px;
+    margin: 60px auto;
+    max-width: 800px;
 }
 
 .app-title {
@@ -31,11 +95,6 @@ max-width: 800px;
         font-family: Cerebri-Sans, Helvetica, Arial, sans-serif;
         padding: 40px;
         margin: 50px;
-}
-
-a {
-    color: #1878cd;
-    text-decoration: none;
 }
 
 .form-control {
@@ -113,7 +172,7 @@ padding-top: 40px;
 
 .forecast {
     margin-top: 30px;
-    text-align: center;  
+    text-align: center;
 }
 
 .forecast-date {
@@ -139,4 +198,9 @@ padding-top: 40px;
     margin-top: 40px;
     font-size: 12px;
     text-align: center;
+    color:#565656;
+}
+
+.footnote-link {
+    color: #2497fb;
 }

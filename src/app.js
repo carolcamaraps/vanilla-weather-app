@@ -100,3 +100,11 @@ let form = document.querySelector("#search-form");
 form.addEventListener("submit", handleSubmit);
 
 search("Rio de Janeiro");
+
+let ChangeThemeBtn = document.querySelector("#change-theme");
+
+ChangeThemeBtn.addEventListener("change", function() {
+
+  document.body.classList.toggle("dark");
+
+})
