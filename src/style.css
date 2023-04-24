@@ -33,9 +33,18 @@ background: linear-gradient(89.7deg, rgb(0, 32, 95) 2.8%, rgb(132, 53, 142) 97.8
     color: #fff;
 }
 
+.dark .icon-sun {
+    display: none;
+}
+
+.dark .icon-moon {
+    display: block;
+    filter: invert(100%) sepia(3%) saturate(0%) hue-rotate(18deg) brightness(104%) contrast(102%);
+}
+
 .dark .form-control {
-    background: #d0cbcb50;
-    color: #fff;
+    background: #ffffffc5;
+    color: rgb(156, 59, 169);
 }
 
 .dark .search-button {
@@ -83,10 +92,6 @@ background: linear-gradient(89.7deg, rgb(0, 32, 95) 2.8%, rgb(132, 53, 142) 97.8
     max-width: 800px;
 }
 
-.app-title {
-    margin-bottom: 20px;
-}
-
 .weather-app {
         background: #fff;
         border-radius: 16px;
@@ -95,6 +100,26 @@ background: linear-gradient(89.7deg, rgb(0, 32, 95) 2.8%, rgb(132, 53, 142) 97.8
         font-family: Cerebri-Sans, Helvetica, Arial, sans-serif;
         padding: 40px;
         margin: 50px;
+}
+
+.app-title {
+    margin-bottom: 20px;
+}
+
+.icons:hover {
+    cursor: pointer;
+}
+
+.icon-sun {
+    display: block;
+}
+
+.icon-moon {
+    display: none;
+}
+
+.title {
+    text-align: center;
 }
 
 .form-control {
