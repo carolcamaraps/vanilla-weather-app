@@ -103,8 +103,10 @@ search("Rio de Janeiro");
 
 let ChangeThemeBtn = document.querySelector("#change-theme");
 
-ChangeThemeBtn.addEventListener("change", function() {
-
+function toggleDarkMode() {
   document.body.classList.toggle("dark");
+}
 
-})
+ChangeThemeBtn.addEventListener("change", function() {
+   toggleDarkMode();
+});
