@@ -107,6 +107,6 @@ function toggleDarkMode() {
   document.body.classList.toggle("dark");
 }
 
-ChangeThemeBtn.addEventListener("change", function() {
-   toggleDarkMode();
+ChangeThemeBtn.addEventListener("change", function () {
+  toggleDarkMode();
 });
